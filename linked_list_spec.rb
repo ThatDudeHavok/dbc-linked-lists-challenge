@@ -8,4 +8,12 @@ describe 'node' do
       expect(node.element).to eq 'thingy'
     end
   end
+  context '#insert_after' do
+    it 'Adds node reference to parent' do
+      parent_node = Node.new('parent')
+      child_node = Node.new('child')
+      parent_node.insert_after(child_node)
+      expect(parent_node.linked_node).to be child_node
+    end
+  end
 end
