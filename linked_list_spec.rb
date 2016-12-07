@@ -9,7 +9,7 @@ describe 'node' do
     end
   end
   context '#insert_after' do
-    it 'Adds node reference to parent' do
+    it 'links parent node to a child' do
       parent_node = Node.new('parent')
       child_node = Node.new('child')
       parent_node.insert_after(child_node)
